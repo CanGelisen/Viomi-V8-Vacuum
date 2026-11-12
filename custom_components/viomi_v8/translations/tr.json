@@ -1,0 +1,64 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Viomi V8 Robot Süpürge",
+        "description": "Süpürgenizin yerel IP adresini ve 32 karakterlik token'ını girin (Mi Robot Vacuum-Mop P, viomi.vacuum.v8).",
+        "data": { "host": "IP adresi", "token": "Token" }
+      },
+      "reconfigure": {
+        "title": "Viomi V8 ayarlarını değiştir",
+        "data": { "host": "IP adresi", "token": "Token" }
+      }
+    },
+    "error": {
+      "cannot_connect": "Süpürgeye ulaşılamadı. IP adresini ve token'ı kontrol edin.",
+      "wrong_model": "Bu cihaz viomi.vacuum.v8 değil."
+    },
+    "abort": {
+      "already_configured": "Bu süpürge zaten ekli.",
+      "reconfigure_successful": "Ayarlar güncellendi.",
+      "wrong_device": "Bu adres farklı bir cihaza ait."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "clean_area": { "name": "Temizlenen alan" },
+      "clean_time": { "name": "Temizlik süresi" },
+      "error": { "name": "Hata" },
+      "attachment": {
+        "name": "Takılı parça",
+        "state": {
+          "none": "Yok",
+          "dust_bin": "Toz haznesi",
+          "water_tank": "Su haznesi",
+          "dust_bin_and_water_tank": "Toz ve su haznesi"
+        }
+      }
+    },
+    "select": {
+      "water_level": {
+        "name": "Su seviyesi",
+        "state": { "low": "Düşük", "medium": "Orta", "high": "Yüksek" }
+      },
+      "clean_mode": {
+        "name": "Temizlik modu",
+        "state": { "vacuum": "Süpürme", "vacuum_and_mop": "Süpürme ve paspas", "mop": "Paspas" }
+      },
+      "mop_pattern": {
+        "name": "Paspas deseni",
+        "state": { "s_shape": "S şeklinde", "y_shape": "Y şeklinde" }
+      }
+    }
+  },
+  "services": {
+    "clean_rooms": {
+      "name": "Odaları temizle",
+      "description": "Bir veya daha fazla odayı cihaz oda numarasıyla temizler.",
+      "fields": {
+        "rooms": { "name": "Odalar", "description": "Oda numaraları listesi, örneğin [10, 13]." },
+        "edge": { "name": "Kenarlar", "description": "Kenarları da süpür." }
+      }
+    }
+  }
+}

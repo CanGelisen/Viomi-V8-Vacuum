@@ -1,0 +1,64 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Viomi V8 Vacuum",
+        "description": "Enter the local IP address and the 32-character token of your vacuum (Mi Robot Vacuum-Mop P, viomi.vacuum.v8).",
+        "data": { "host": "IP address", "token": "Token" }
+      },
+      "reconfigure": {
+        "title": "Reconfigure Viomi V8",
+        "data": { "host": "IP address", "token": "Token" }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not reach the vacuum. Check the IP address and token.",
+      "wrong_model": "This device is not a viomi.vacuum.v8."
+    },
+    "abort": {
+      "already_configured": "This vacuum is already configured.",
+      "reconfigure_successful": "Settings updated.",
+      "wrong_device": "That address belongs to a different device."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "clean_area": { "name": "Cleaned area" },
+      "clean_time": { "name": "Cleaning time" },
+      "error": { "name": "Error" },
+      "attachment": {
+        "name": "Attachment",
+        "state": {
+          "none": "None",
+          "dust_bin": "Dust bin",
+          "water_tank": "Water tank",
+          "dust_bin_and_water_tank": "Dust bin and water tank"
+        }
+      }
+    },
+    "select": {
+      "water_level": {
+        "name": "Water level",
+        "state": { "low": "Low", "medium": "Medium", "high": "High" }
+      },
+      "clean_mode": {
+        "name": "Cleaning mode",
+        "state": { "vacuum": "Vacuum", "vacuum_and_mop": "Vacuum and mop", "mop": "Mop" }
+      },
+      "mop_pattern": {
+        "name": "Mop pattern",
+        "state": { "s_shape": "S-shape", "y_shape": "Y-shape" }
+      }
+    }
+  },
+  "services": {
+    "clean_rooms": {
+      "name": "Clean rooms",
+      "description": "Clean one or more rooms by their device room id.",
+      "fields": {
+        "rooms": { "name": "Rooms", "description": "List of room ids, for example [10, 13]." },
+        "edge": { "name": "Edges", "description": "Also vacuum along the edges." }
+      }
+    }
+  }
+}

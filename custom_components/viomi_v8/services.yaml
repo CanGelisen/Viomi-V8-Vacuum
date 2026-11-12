@@ -1,0 +1,16 @@
+clean_rooms:
+  target:
+    entity:
+      integration: viomi_v8
+      domain: vacuum
+  fields:
+    rooms:
+      required: true
+      example: "[10, 13]"
+      selector:
+        object:
+    edge:
+      required: false
+      default: false
+      selector:
+        boolean:
